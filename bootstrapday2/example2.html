@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function()
+        {
+            $("em").addClass("selected");
+            $("#myid").addClass("highlight");
+        });
+    
+    </script>
+    <style>
+        .selected { color:red;}
+        .highlight { background: yellow;}
+    </style>
+</head>
+<body>
+    <div>
+    <em title="Bold and Brave">this is first paragraph</em>
+    <p id="myid"> this is second para</p>
+    <div id="divid"></div>
+    </div>
+</body>
+</html>
