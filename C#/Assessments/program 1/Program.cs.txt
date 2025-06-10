@@ -1,0 +1,36 @@
+﻿using System;
+
+class ReportCard
+{
+    static void Main()
+    {
+        Console.Write("Name : ");
+        string name = Console.ReadLine();
+
+        Console.Write("Enter : ");
+        string std = Console.ReadLine();
+
+        Console.Write("Div: ");
+        string div = Console.ReadLine();
+
+        Console.Write("subjects: ");
+        int subjects = Convert.ToInt32(Console.ReadLine());
+
+        double total = 0;
+        for (int i = 1; i <= subjects; i++)
+        {
+            Console.Write("Enter marks " + i + ": ");
+            double marks = Convert.ToDouble(Console.ReadLine());
+            total += marks;
+        }
+
+        double average = total / subjects;
+
+        Console.WriteLine("Report Card");
+        Console.WriteLine("Name : " + name.PadRight(40) + "*");
+        Console.WriteLine("STD : " + std.PadRight(49) + "*");
+        Console.WriteLine("Div : " + div.PadRight(49) + "*");
+        Console.WriteLine("Average Score : " + average.ToString("F2").PadRight(40) + "*");
+        
+    }
+}
